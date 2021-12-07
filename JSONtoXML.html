@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <body >
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>JSON to XML</title>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="JSONtoXML.js"></script>
+            <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vkbeautify/vkbeautify.0.99.00.beta.js"></script>
+    
+        </head>
+ 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form role="form" method="post" id="reused_form">
+                      
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="name">Your JSON:</label>
+                                <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Insert/Paste JSON Data" maxlength="6000" rows="7" style="resize: none;"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Convert JSON to XML</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-danger" role="alert" id="error_message" hidden>
+                        Not a Valid JSON!
+                      </div>
+                      <div class="alert alert-danger" role="alert" id="empty_error_message" hidden>
+                        No Data to Parse
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label for="name"> XML:</label>
+                            <textarea class="form-control" type="textarea" id="response" name="response" placeholder="XML converted Data" maxlength="6000" rows="7" style="resize: none;"></textarea>
+                            <br/>
+                            <button onclick="copy()" class="btn btn-sm" id="btnCopy">Copy</button>
+                            <button onclick="clearData()" class="btn btn-sm" id="btnClear">Clear</button>
+                        </div>   
+                </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
